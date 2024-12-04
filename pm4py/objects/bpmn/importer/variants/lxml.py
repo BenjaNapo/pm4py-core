@@ -298,6 +298,7 @@ def apply(path, parameters=None):
     bpmn_graph
         BPMN graph
     """
+    #Parsing BPMN
     if parameters is None:
         parameters = {}
 

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="ent_Event_1ava087">
+        <name>
+          <text>ent_Event_1ava087</text>
+        </name>
+      </place>
+      <place id="exi_Gateway_0639fuj">
+        <name>
+          <text>exi_Gateway_0639fuj</text>
+        </name>
+      </place>
+      <place id="exi_Activity_0aymoev">
+        <name>
+          <text>exi_Activity_0aymoev</text>
+        </name>
+      </place>
+      <place id="ent_Activity_09jsjzy">
+        <name>
+          <text>ent_Activity_09jsjzy</text>
+        </name>
+      </place>
+      <place id="exi_Gateway_01w1i17">
+        <name>
+          <text>exi_Gateway_01w1i17</text>
+        </name>
+      </place>
+      <place id="exi_Activity_0ufzxdd">
+        <name>
+          <text>exi_Activity_0ufzxdd</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_0nkl8r0">
+        <name>
+          <text>ent_Gateway_0nkl8r0</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_07lfcl4">
+        <name>
+          <text>ent_Gateway_07lfcl4</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_1555p5k">
+        <name>
+          <text>ent_Gateway_1555p5k</text>
+        </name>
+      </place>
+      <transition id="Activity_0aymoev">
+        <name>
+          <text>Task 2A</text>
+        </name>
+      </transition>
+      <transition id="sfl_Flow_1jop406">
+        <name>
+          <text>sfl_Flow_1jop406</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="d4a4e001-7716-4565-be12-7ce37431dfbb"/>
+      </transition>
+      <transition id="Activity_0ufzxdd">
+        <name>
+          <text>Task 3A</text>
+        </name>
+      </transition>
+      <transition id="Activity_0bxqlp2">
+        <name>
+          <text>Task 5A</text>
+        </name>
+      </transition>
+      <transition id="Activity_1qeep2i">
+        <name>
+          <text>Task 1</text>
+        </name>
+      </transition>
+      <transition id="sfl_Flow_1ucdo27">
+        <name>
+          <text>sfl_Flow_1ucdo27</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="ebf69aea-e628-49eb-80d7-0a497a37e32b"/>
+      </transition>
+      <transition id="Activity_1omyroi">
+        <name>
+          <text>Task 3</text>
+        </name>
+      </transition>
+      <transition id="Event_1ava087">
+        <name>
+          <text>Event_1ava087</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="1b84f794-22b4-4b00-a910-1f7c96c79f1a"/>
+      </transition>
+      <transition id="Activity_0uu4w0b">
+        <name>
+          <text>Task 4</text>
+        </name>
+      </transition>
+      <transition id="Activity_07ax7cm">
+        <name>
+          <text>Task 5</text>
+        </name>
+      </transition>
+      <transition id="26884a5d-394a-4cd0-a95b-1b2cd7cfed50">
+        <name>
+          <text>26884a5d-394a-4cd0-a95b-1b2cd7cfed50</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="0496836b-0aa2-4547-8061-fd594882c5c8"/>
+      </transition>
+      <transition id="sfl_Flow_04mbkia">
+        <name>
+          <text>sfl_Flow_04mbkia</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="965332a4-1e0f-4bff-9e06-cdb33bab7dd5"/>
+      </transition>
+      <transition id="Activity_09jsjzy">
+        <name>
+          <text>Task 1A</text>
+        </name>
+      </transition>
+      <transition id="Activity_1h4fnr0">
+        <name>
+          <text>Task 2</text>
+        </name>
+      </transition>
+      <arc id="2294638116352" source="exi_Activity_0aymoev" target="sfl_Flow_04mbkia"/>
+      <arc id="2294638220288" source="exi_Activity_0aymoev" target="Activity_1h4fnr0"/>
+      <arc id="2294638219808" source="Activity_0uu4w0b" target="exi_Gateway_01w1i17"/>
+      <arc id="2294638219328" source="sfl_Flow_04mbkia" target="ent_Gateway_1555p5k"/>
+      <arc id="2294638104160" source="Activity_0aymoev" target="exi_Activity_0aymoev"/>
+      <arc id="2294638220384" source="exi_Gateway_01w1i17" target="Activity_07ax7cm"/>
+      <arc id="2294638217312" source="Activity_1h4fnr0" target="ent_Gateway_0nkl8r0"/>
+      <arc id="2294638219904" source="ent_Gateway_0nkl8r0" target="Activity_0uu4w0b"/>
+      <arc id="2294638106272" source="source" target="26884a5d-394a-4cd0-a95b-1b2cd7cfed50"/>
+      <arc id="2294638113472" source="exi_Gateway_01w1i17" target="sfl_Flow_1jop406"/>
+      <arc id="2294638220480" source="ent_Gateway_1555p5k" target="Activity_0bxqlp2"/>
+      <arc id="2294638218944" source="26884a5d-394a-4cd0-a95b-1b2cd7cfed50" target="ent_Gateway_07lfcl4"/>
+      <arc id="2294638220000" source="ent_Gateway_07lfcl4" target="Activity_1qeep2i"/>
+      <arc id="2294638104832" source="Activity_0ufzxdd" target="exi_Activity_0ufzxdd"/>
+      <arc id="2294638219520" source="Activity_09jsjzy" target="exi_Gateway_0639fuj"/>
+      <arc id="2294638217504" source="sfl_Flow_1jop406" target="ent_Gateway_07lfcl4"/>
+      <arc id="2294638220576" source="exi_Gateway_0639fuj" target="Activity_0ufzxdd"/>
+      <arc id="2294638218560" source="Activity_0bxqlp2" target="ent_Event_1ava087"/>
+      <arc id="2294638220096" source="exi_Activity_0ufzxdd" target="Activity_1omyroi"/>
+      <arc id="2294638217024" source="sfl_Flow_1ucdo27" target="ent_Gateway_1555p5k"/>
+      <arc id="2294638219616" source="Activity_1omyroi" target="ent_Gateway_0nkl8r0"/>
+      <arc id="2294638108048" source="ent_Activity_09jsjzy" target="Activity_09jsjzy"/>
+      <arc id="2294638220192" source="exi_Gateway_0639fuj" target="Activity_0aymoev"/>
+      <arc id="2294638218176" source="Activity_1qeep2i" target="ent_Activity_09jsjzy"/>
+      <arc id="2294638219712" source="Activity_07ax7cm" target="ent_Event_1ava087"/>
+      <arc id="2294638116832" source="exi_Activity_0ufzxdd" target="sfl_Flow_1ucdo27"/>
+      <arc id="2294638217696" source="Event_1ava087" target="sink"/>
+      <arc id="2294638106608" source="ent_Event_1ava087" target="Event_1ava087"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

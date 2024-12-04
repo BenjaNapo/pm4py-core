@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="test" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>test</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p3">
+        <name>
+          <text>p3</text>
+        </name>
+      </place>
+      <place id="p4">
+        <name>
+          <text>p4</text>
+        </name>
+      </place>
+      <place id="p1">
+        <name>
+          <text>p1</text>
+        </name>
+      </place>
+      <place id="p2">
+        <name>
+          <text>p2</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <transition id="T02 Check confirmation of receipt">
+        <name>
+          <text>T02 Check confirmation of receipt</text>
+        </name>
+      </transition>
+      <transition id="Confirmation of receipt">
+        <name>
+          <text>Confirmation of receipt</text>
+        </name>
+      </transition>
+      <transition id="T04 Determine confirmation of receipt">
+        <name>
+          <text>T04 Determine confirmation of receipt</text>
+        </name>
+      </transition>
+      <transition id="T06 Determine necessity of stop advice">
+        <name>
+          <text>T06 Determine necessity of stop advice</text>
+        </name>
+      </transition>
+      <transition id="T05 Print and send confirmation of receipt">
+        <name>
+          <text>T05 Print and send confirmation of receipt</text>
+        </name>
+      </transition>
+      <arc id="3049763116128" source="Confirmation of receipt" target="p1"/>
+      <arc id="3049763116224" source="T02 Check confirmation of receipt" target="p2"/>
+      <arc id="3049763116320" source="T04 Determine confirmation of receipt" target="p3"/>
+      <arc id="3049763116416" source="T05 Print and send confirmation of receipt" target="p4"/>
+      <arc id="3049763116512" source="T06 Determine necessity of stop advice" target="sink"/>
+      <arc id="3049762774032" source="source" target="Confirmation of receipt"/>
+      <arc id="3049763116176" source="p1" target="T02 Check confirmation of receipt"/>
+      <arc id="3049763116272" source="p2" target="T04 Determine confirmation of receipt"/>
+      <arc id="3049763116368" source="p3" target="T05 Print and send confirmation of receipt"/>
+      <arc id="3049763116464" source="p4" target="T06 Determine necessity of stop advice"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

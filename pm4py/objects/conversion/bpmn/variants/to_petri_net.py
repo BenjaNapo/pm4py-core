@@ -110,6 +110,7 @@ def apply(bpmn_graph, parameters=None):
     # keep this correspondence for adding invisible transitions for OR-gateways
     inclusive_gateway_exit = set()
     inclusive_gateway_entry = set()
+    #Conversione BPMN
 
     flow_place = {}
     source_count = {}

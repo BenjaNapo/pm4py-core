@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="ent_Activity_0b4uoak">
+        <name>
+          <text>ent_Activity_0b4uoak</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="exi_Activity_1qeep2i">
+        <name>
+          <text>exi_Activity_1qeep2i</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_0051v7y">
+        <name>
+          <text>ent_Gateway_0051v7y</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_0av765w">
+        <name>
+          <text>ent_Gateway_0av765w</text>
+        </name>
+      </place>
+      <place id="ent_Activity_1qbksft">
+        <name>
+          <text>ent_Activity_1qbksft</text>
+        </name>
+      </place>
+      <place id="exi_Gateway_1mksc6h">
+        <name>
+          <text>exi_Gateway_1mksc6h</text>
+        </name>
+      </place>
+      <transition id="Activity_09jsjzy">
+        <name>
+          <text>Task 1A</text>
+        </name>
+      </transition>
+      <transition id="Activity_1qeep2i">
+        <name>
+          <text>Task 1</text>
+        </name>
+      </transition>
+      <transition id="Activity_1sy9z9v">
+        <name>
+          <text>Task 2A</text>
+        </name>
+      </transition>
+      <transition id="Activity_07ax7cm">
+        <name>
+          <text>Task 5</text>
+        </name>
+      </transition>
+      <transition id="Activity_0bxqlp2">
+        <name>
+          <text>Task 5A</text>
+        </name>
+      </transition>
+      <transition id="Activity_1qbksft">
+        <name>
+          <text>Task 3</text>
+        </name>
+      </transition>
+      <transition id="Activity_0b4uoak">
+        <name>
+          <text>Task 2</text>
+        </name>
+      </transition>
+      <transition id="Activity_0jm0yc7">
+        <name>
+          <text>3A</text>
+        </name>
+      </transition>
+      <arc id="2056048722432" source="Activity_07ax7cm" target="sink"/>
+      <arc id="2056048723008" source="exi_Gateway_1mksc6h" target="Activity_0jm0yc7"/>
+      <arc id="2056048722528" source="Activity_1sy9z9v" target="ent_Gateway_0051v7y"/>
+      <arc id="2056048672352" source="Activity_0jm0yc7" target="ent_Gateway_0051v7y"/>
+      <arc id="2056048663184" source="ent_Activity_0b4uoak" target="Activity_0b4uoak"/>
+      <arc id="2056048723104" source="source" target="Activity_1qeep2i"/>
+      <arc id="2056048663712" source="Activity_1qeep2i" target="exi_Activity_1qeep2i"/>
+      <arc id="2056048671392" source="Activity_0b4uoak" target="ent_Gateway_0av765w"/>
+      <arc id="2056048722624" source="Activity_0bxqlp2" target="sink"/>
+      <arc id="2056048723200" source="exi_Gateway_1mksc6h" target="Activity_1sy9z9v"/>
+      <arc id="2056048658192" source="ent_Activity_1qbksft" target="Activity_1qbksft"/>
+      <arc id="2056048672544" source="Activity_09jsjzy" target="exi_Gateway_1mksc6h"/>
+      <arc id="2056048722720" source="ent_Gateway_0051v7y" target="Activity_0bxqlp2"/>
+      <arc id="2056048722240" source="Activity_1qbksft" target="ent_Gateway_0av765w"/>
+      <arc id="2056048722816" source="ent_Gateway_0av765w" target="Activity_07ax7cm"/>
+      <arc id="2056048722912" source="source" target="Activity_09jsjzy"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

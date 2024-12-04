@@ -5,7 +5,7 @@ from pm4py.objects.conversion.process_tree import converter as pt_converter
 from pm4py.algo.discovery.inductive import algorithm as inductive_miner
 from pm4py.objects.log.importer.xes import importer as xes_import
 from pm4py.objects.bpmn.exporter import exporter as bpmn_exporter
-from examples import examples_conf
+import examples_conf
 import importlib.util
 
 

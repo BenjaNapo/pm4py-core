@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="exi_Gateway_1mksc6h">
+        <name>
+          <text>exi_Gateway_1mksc6h</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_0051v7y">
+        <name>
+          <text>ent_Gateway_0051v7y</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="exi_Gateway_0z6et81">
+        <name>
+          <text>exi_Gateway_0z6et81</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="ent_Gateway_0av765w">
+        <name>
+          <text>ent_Gateway_0av765w</text>
+        </name>
+      </place>
+      <transition id="Activity_0b4uoak">
+        <name>
+          <text>Task 2</text>
+        </name>
+      </transition>
+      <transition id="Activity_0jm0yc7">
+        <name>
+          <text>3A</text>
+        </name>
+      </transition>
+      <transition id="90f55e22-9e2f-4f53-9e43-c62abcbf91ad">
+        <name>
+          <text>90f55e22-9e2f-4f53-9e43-c62abcbf91ad</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="d2523454-32c3-43f0-8d85-702db43d3dd6"/>
+      </transition>
+      <transition id="Gateway_0av765w">
+        <name>
+          <text>Gateway_0av765w</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="23655fb8-8d62-4e71-8461-272ac2989532"/>
+      </transition>
+      <transition id="Gateway_0051v7y">
+        <name>
+          <text>Gateway_0051v7y</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="30a01a99-ef74-4d12-a0e7-d717792c6964"/>
+      </transition>
+      <transition id="Activity_1qbksft">
+        <name>
+          <text>Task 3</text>
+        </name>
+      </transition>
+      <transition id="Activity_1sy9z9v">
+        <name>
+          <text>Task 2A</text>
+        </name>
+      </transition>
+      <transition id="a57969bd-c03b-4f66-9992-41f360af5f61">
+        <name>
+          <text>a57969bd-c03b-4f66-9992-41f360af5f61</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="b38a82bd-d977-4364-b514-04397de80491"/>
+      </transition>
+      <arc id="2977098403904" source="source" target="a57969bd-c03b-4f66-9992-41f360af5f61"/>
+      <arc id="2977098403424" source="source" target="90f55e22-9e2f-4f53-9e43-c62abcbf91ad"/>
+      <arc id="2977098414704" source="exi_Gateway_1mksc6h" target="Activity_1sy9z9v"/>
+      <arc id="2977098402944" source="ent_Gateway_0051v7y" target="Gateway_0051v7y"/>
+      <arc id="2977098414800" source="exi_Gateway_1mksc6h" target="Activity_0jm0yc7"/>
+      <arc id="2977098404576" source="ent_Gateway_0av765w" target="Gateway_0av765w"/>
+      <arc id="2977098414320" source="Gateway_0051v7y" target="sink"/>
+      <arc id="2977098413840" source="Gateway_0av765w" target="sink"/>
+      <arc id="2977098414896" source="exi_Gateway_0z6et81" target="Activity_1qbksft"/>
+      <arc id="2977098413360" source="Activity_1sy9z9v" target="ent_Gateway_0051v7y"/>
+      <arc id="2977098414416" source="Activity_0jm0yc7" target="ent_Gateway_0051v7y"/>
+      <arc id="2977098412400" source="Activity_0b4uoak" target="ent_Gateway_0av765w"/>
+      <arc id="2977098414992" source="exi_Gateway_0z6et81" target="Activity_0b4uoak"/>
+      <arc id="2977098413456" source="90f55e22-9e2f-4f53-9e43-c62abcbf91ad" target="exi_Gateway_0z6et81"/>
+      <arc id="2977098414512" source="Activity_1qbksft" target="ent_Gateway_0av765w"/>
+      <arc id="2977098414032" source="a57969bd-c03b-4f66-9992-41f360af5f61" target="exi_Gateway_1mksc6h"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

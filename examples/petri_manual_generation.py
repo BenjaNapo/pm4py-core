@@ -1,7 +1,7 @@
 import pm4py
 from pm4py.objects.petri_net.obj import PetriNet, Marking
 from pm4py.objects.petri_net.utils import petri_utils
-from examples import examples_conf
+import examples_conf
 import importlib.util
 
 
@@ -51,7 +51,7 @@ def execute_script():
     if importlib.util.find_spec("graphviz"):
         pm4py.view_petri_net(net, im, fm, format=examples_conf.TARGET_IMG_FORMAT)
 
-    #pm4py.write_pnml(net, im, fm, "receipt_one_variant.pnml")
+    pm4py.write_pnml(net, im, fm, "receipt_one_variant.pnml")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="ent_Activity_13abcws">
+        <name>
+          <text>ent_Activity_13abcws</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="ent_Activity_1bas2yp">
+        <name>
+          <text>ent_Activity_1bas2yp</text>
+        </name>
+      </place>
+      <place id="ent_Activity_07ax7cm">
+        <name>
+          <text>ent_Activity_07ax7cm</text>
+        </name>
+      </place>
+      <place id="ent_Activity_0bxqlp2">
+        <name>
+          <text>ent_Activity_0bxqlp2</text>
+        </name>
+      </place>
+      <transition id="Activity_07ax7cm">
+        <name>
+          <text>Task 5</text>
+        </name>
+      </transition>
+      <transition id="Activity_1bas2yp">
+        <name>
+          <text>Task 2</text>
+        </name>
+      </transition>
+      <transition id="Activity_1qeep2i">
+        <name>
+          <text>Task 1</text>
+        </name>
+      </transition>
+      <transition id="Activity_0bxqlp2">
+        <name>
+          <text>Task 5A</text>
+        </name>
+      </transition>
+      <transition id="Activity_13abcws">
+        <name>
+          <text>Task 2A</text>
+        </name>
+      </transition>
+      <transition id="Activity_09jsjzy">
+        <name>
+          <text>Task 1A</text>
+        </name>
+      </transition>
+      <arc id="2232077526288" source="source" target="Activity_1qeep2i"/>
+      <arc id="2232077517216" source="ent_Activity_13abcws" target="Activity_13abcws"/>
+      <arc id="2232077525712" source="Activity_09jsjzy" target="ent_Activity_13abcws"/>
+      <arc id="2232077516976" source="ent_Activity_07ax7cm" target="Activity_07ax7cm"/>
+      <arc id="2232077525808" source="Activity_1bas2yp" target="ent_Activity_07ax7cm"/>
+      <arc id="2232077519664" source="ent_Activity_1bas2yp" target="Activity_1bas2yp"/>
+      <arc id="2232077525424" source="Activity_07ax7cm" target="sink"/>
+      <arc id="2232077526192" source="Activity_1qeep2i" target="ent_Activity_1bas2yp"/>
+      <arc id="2232077524944" source="Activity_0bxqlp2" target="sink"/>
+      <arc id="2232077520096" source="ent_Activity_0bxqlp2" target="Activity_0bxqlp2"/>
+      <arc id="2232077526384" source="source" target="Activity_09jsjzy"/>
+      <arc id="2232077524464" source="Activity_13abcws" target="ent_Activity_0bxqlp2"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

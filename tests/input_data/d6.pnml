@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="exi_Activity_1qeep2i">
+        <name>
+          <text>exi_Activity_1qeep2i</text>
+        </name>
+      </place>
+      <place id="exi_Gateway_0639fuj">
+        <name>
+          <text>exi_Gateway_0639fuj</text>
+        </name>
+      </place>
+      <place id="ent_Activity_07ax7cm">
+        <name>
+          <text>ent_Activity_07ax7cm</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="ent_Activity_1h4fnr0">
+        <name>
+          <text>ent_Activity_1h4fnr0</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_0nkl8r0">
+        <name>
+          <text>ent_Gateway_0nkl8r0</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_1555p5k">
+        <name>
+          <text>ent_Gateway_1555p5k</text>
+        </name>
+      </place>
+      <place id="ent_Activity_1omyroi">
+        <name>
+          <text>ent_Activity_1omyroi</text>
+        </name>
+      </place>
+      <transition id="Activity_1h4fnr0">
+        <name>
+          <text>Task 2</text>
+        </name>
+      </transition>
+      <transition id="Activity_0ufzxdd">
+        <name>
+          <text>Task 3A</text>
+        </name>
+      </transition>
+      <transition id="Activity_09jsjzy">
+        <name>
+          <text>Task 1A</text>
+        </name>
+      </transition>
+      <transition id="Activity_1na8ali">
+        <name>
+          <text>Task 2A</text>
+        </name>
+      </transition>
+      <transition id="Activity_1omyroi">
+        <name>
+          <text>Task 3</text>
+        </name>
+      </transition>
+      <transition id="Activity_0bxqlp2">
+        <name>
+          <text>Task 5A</text>
+        </name>
+      </transition>
+      <transition id="Activity_0uu4w0b">
+        <name>
+          <text>Task 4</text>
+        </name>
+      </transition>
+      <transition id="Activity_07ax7cm">
+        <name>
+          <text>Task 5</text>
+        </name>
+      </transition>
+      <transition id="Activity_1qeep2i">
+        <name>
+          <text>Task 1</text>
+        </name>
+      </transition>
+      <arc id="2289153017856" source="source" target="Activity_09jsjzy"/>
+      <arc id="2289153016320" source="Activity_07ax7cm" target="sink"/>
+      <arc id="2289152939104" source="ent_Activity_1omyroi" target="Activity_1omyroi"/>
+      <arc id="2289153016416" source="Activity_09jsjzy" target="exi_Gateway_0639fuj"/>
+      <arc id="2289153017952" source="exi_Gateway_0639fuj" target="Activity_0ufzxdd"/>
+      <arc id="2289153017472" source="ent_Gateway_0nkl8r0" target="Activity_0uu4w0b"/>
+      <arc id="2289152949376" source="Activity_0uu4w0b" target="ent_Activity_07ax7cm"/>
+      <arc id="2289152937664" source="Activity_1qeep2i" target="exi_Activity_1qeep2i"/>
+      <arc id="2289153017568" source="ent_Gateway_1555p5k" target="Activity_0bxqlp2"/>
+      <arc id="2289152938288" source="ent_Activity_1h4fnr0" target="Activity_1h4fnr0"/>
+      <arc id="2289152949568" source="Activity_1na8ali" target="ent_Gateway_1555p5k"/>
+      <arc id="2289153017664" source="exi_Gateway_0639fuj" target="Activity_1na8ali"/>
+      <arc id="2289153017184" source="Activity_0bxqlp2" target="sink"/>
+      <arc id="2289152940400" source="ent_Activity_07ax7cm" target="Activity_07ax7cm"/>
+      <arc id="2289152950144" source="Activity_1omyroi" target="ent_Gateway_0nkl8r0"/>
+      <arc id="2289153017760" source="source" target="Activity_1qeep2i"/>
+      <arc id="2289153017280" source="Activity_1h4fnr0" target="ent_Gateway_0nkl8r0"/>
+      <arc id="2289153016800" source="Activity_0ufzxdd" target="ent_Gateway_1555p5k"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

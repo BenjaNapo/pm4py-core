@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="ent_Gateway_0av765w">
+        <name>
+          <text>ent_Gateway_0av765w</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="ent_Gateway_0051v7y">
+        <name>
+          <text>ent_Gateway_0051v7y</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="ent_Activity_0b4uoak">
+        <name>
+          <text>ent_Activity_0b4uoak</text>
+        </name>
+      </place>
+      <place id="exi_Gateway_1mksc6h">
+        <name>
+          <text>exi_Gateway_1mksc6h</text>
+        </name>
+      </place>
+      <place id="ent_Activity_1qbksft">
+        <name>
+          <text>ent_Activity_1qbksft</text>
+        </name>
+      </place>
+      <transition id="Gateway_0av765w">
+        <name>
+          <text>Gateway_0av765w</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="a6e33dd4-0539-4cc1-b0d4-062047b417d5"/>
+      </transition>
+      <transition id="Activity_1qbksft">
+        <name>
+          <text>Task 3</text>
+        </name>
+      </transition>
+      <transition id="60312a28-654d-44d4-b935-e854c787ca95">
+        <name>
+          <text>60312a28-654d-44d4-b935-e854c787ca95</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="06687a3c-525f-47cf-b788-94ba7e8dbc8f"/>
+      </transition>
+      <transition id="Activity_0jm0yc7">
+        <name>
+          <text>3A</text>
+        </name>
+      </transition>
+      <transition id="Activity_1sy9z9v">
+        <name>
+          <text>Task 2A</text>
+        </name>
+      </transition>
+      <transition id="Gateway_0051v7y">
+        <name>
+          <text>Gateway_0051v7y</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="9e854d40-9a06-42e0-86b3-4eb65c039853"/>
+      </transition>
+      <transition id="Activity_0b4uoak">
+        <name>
+          <text>Task 2</text>
+        </name>
+      </transition>
+      <transition id="d0e92ac2-d9f8-4dd3-bd7f-a316c0166367">
+        <name>
+          <text>d0e92ac2-d9f8-4dd3-bd7f-a316c0166367</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="ac0dbd71-7e96-47ad-8b50-120a25466ff4"/>
+      </transition>
+      <arc id="2723348723712" source="60312a28-654d-44d4-b935-e854c787ca95" target="ent_Activity_1qbksft"/>
+      <arc id="2723348721216" source="Activity_1qbksft" target="ent_Gateway_0av765w"/>
+      <arc id="2723348722272" source="60312a28-654d-44d4-b935-e854c787ca95" target="ent_Activity_0b4uoak"/>
+      <arc id="2723348723808" source="Activity_0jm0yc7" target="ent_Gateway_0051v7y"/>
+      <arc id="2723348712624" source="ent_Gateway_0av765w" target="Gateway_0av765w"/>
+      <arc id="2723348714160" source="ent_Activity_1qbksft" target="Activity_1qbksft"/>
+      <arc id="2723348723904" source="Gateway_0av765w" target="sink"/>
+      <arc id="2723348722368" source="Activity_1sy9z9v" target="ent_Gateway_0051v7y"/>
+      <arc id="2723348715264" source="ent_Gateway_0051v7y" target="Gateway_0051v7y"/>
+      <arc id="2723348722944" source="Activity_0b4uoak" target="ent_Gateway_0av765w"/>
+      <arc id="2723348724000" source="exi_Gateway_1mksc6h" target="Activity_0jm0yc7"/>
+      <arc id="2723348713776" source="source" target="d0e92ac2-d9f8-4dd3-bd7f-a316c0166367"/>
+      <arc id="2723348714832" source="source" target="60312a28-654d-44d4-b935-e854c787ca95"/>
+      <arc id="2723348723040" source="Gateway_0051v7y" target="sink"/>
+      <arc id="2723348724096" source="exi_Gateway_1mksc6h" target="Activity_1sy9z9v"/>
+      <arc id="2723348712336" source="ent_Activity_0b4uoak" target="Activity_0b4uoak"/>
+      <arc id="2723348723616" source="d0e92ac2-d9f8-4dd3-bd7f-a316c0166367" target="exi_Gateway_1mksc6h"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
